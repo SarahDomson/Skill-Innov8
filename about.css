@@ -8,8 +8,7 @@
     background: conic-gradient(from -45.28deg at 61.07% 61.25%, #BBD2FF 0deg, #FFFFFF 54.37deg, #F0F5FF 121.29deg, #BBD2FF 360deg);
 }
 .Hero button {
-    padding-block: 8px;
-    padding-inline: 24px;
+    padding: 8px 36px;
     background-color: #193894B2;
     border-radius: 30px;
     border-style: none;
@@ -20,8 +19,8 @@
 }
 .Hero {
     width: 70%;
-    height: 70vh;
-    padding-block: 74px;
+    height: 53vh;
+    padding-block: 60px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -30,12 +29,12 @@
     gap: 37px;
 }
 .Hero p {
-    width: 80%;
+    /*width: 80%;*/
     font-family: Poppins;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
     text-align: center;
-    line-height: 40px;
+    line-height: 1.8;
     color: #100F0F;
 
 }
@@ -44,14 +43,17 @@
     font-size: 40px;
     font-weight: 700;
     font-family: Montserrat;
+    margin-bottom: 8px;
     color: #252B42;
 
 }
 .Head-1 p {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     font-family: Inter;
     color: #737373;
+    line-height: 1.2;
+    padding-bottom: 50px;
 }
 .sec-2{
     padding: 40px 20px;
@@ -78,8 +80,10 @@
 h4 {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 16px;
     color: #252B42;
+}
+.wrap-1 {
+    margin-top: 40px;
 }
 .sec2-cont {
     width: 80%;
@@ -101,6 +105,10 @@ h4 {
     flex-direction: column;
     gap: 20px;
 }
+.cont h4,
+.cont p {
+    font-size: 18px;
+}
 .cont h3,
 .cont h4,
 .cont p {
@@ -109,7 +117,7 @@ h4 {
 }
 .sec-3 {
     background-color: #fafafa;
-    height: 80vh;
+    height: 70vh;
     display: flex;
 }
 .sec-3-1 {
@@ -143,7 +151,7 @@ h4 {
     height: 80vh;
     margin: auto;
     padding-inline: 70px 160px;
-    padding-block: 110px 12px;
+    padding-block: 100px 16px;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -192,4 +200,154 @@ h4 {
 .btn-cont {
     display: flex;
     gap: 30px;
+}
+
+/* Mobile Screen */
+
+@media screen and (max-width: 600px) {
+    .Hero {
+        width: 90%;
+        height: auto;
+        padding-block: 40px;
+        gap: 24px;
+    }
+
+    .Hero p {
+        font-size: 18px;
+    }
+
+    .Hero button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .Head-1 {
+        width: 90%;
+    }
+
+    .Head-1 h2 {
+        font-size: 24px;
+    }
+
+    .Head-1 p {
+        font-size: 16px;
+    }
+
+    .sec2-cont {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .sec-3-1 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .sec-3-1 p {
+        font-size: 16px;
+    }
+
+    .sec-4,
+    .sec-4-1 {
+        flex-direction: column;
+        padding: 40px 20px;
+        height: auto;
+        gap: 32px;
+    }
+
+    .sec-4-1 h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .sec-4-1 p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .btn-cont {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .skil-1 {
+        width: 100%;
+    }
+}
+ /* Tab Screen */
+
+ @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .Hero {
+        width: 80%;
+        padding-block: 50px;
+        gap: 28px;
+    }
+
+    .Hero p {
+        font-size: 20px;
+    }
+
+    .Head-1 {
+        width: 70%;
+    }
+
+    .Head-1 h2 {
+        font-size: 32px;
+    }
+
+    .sec2-cont {
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .sec-3-1 {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    .sec-4-1 {
+        flex-direction: column;
+        padding: 60px 40px;
+        height: auto;
+        gap: 40px;
+    }
+
+    .sec-4-1 h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .btn-cont {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .skil-1 {
+        width: 80%;
+    }
+}
+
+/* Large Screen */
+
+@media screen and (min-width: 1025px) {
+    .Hero {
+        width: 70%;
+        padding-block: 60px;
+    }
+
+    .sec2-cont {
+        flex-direction: row;
+        gap: 120px;
+    }
+
+    .sec-4-1 {
+        flex-direction: row;
+    }
 }
