@@ -13,41 +13,59 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "agility-primary": '#193894',
-                        "agility-secondary": '#252B42',
-                    },
-                    fontFamily: {
-                        roboto: ['Roboto', 'sans-serif'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="scripts/tailwind.js"></script>
 </head>
 
 <body class="bg-white">
-    <!-- Navbar -->
-    <nav class="flex items-center px-6 py-4 shadow-md font-roboto">
-        <img src="assets/images/logo.svg" />
-        <div class="text-xl font-bold text-agility-secondary font-montserrat font-[700] ml-2">Skills-Innov8</div>
-        <div class="space-x-4 hidden md:flex mx-auto w-[366px]">
-            <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
-            <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
-            <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
-            <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+     <!-- Navbar -->
+     <nav class="px-6 py-6 shadow-md font-roboto sticky top-0 bg-white z-50">
+        <div class="flex items-center justify-between gap-12 max-w-screen-lg mx-auto w-full">
+            <!-- Group 6 Logo -->
+            <div class="flex items-center">
+                <img src="assets/images/logo.svg" alt="Logo" />
+                <div class="text-xl font-bold text-agility-secondary font-montserrat ml-2">
+                    Skills-Innov8
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4 mx-auto w-[366px] text-lg">
+                <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
+                <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
+                <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+            </div>
+
+            <!-- Desktop Buttons -->
+           <div class="hidden md:flex space-x-2">
+                <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                 Sign Up
+                </a>
+                <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                 Log In
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-agility-primary" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <button class="bg-agility-primary text-white mr-4 px-4 py-2 rounded-lg hidden md:block rounded-[5px] w-[120px]">
-            Sign Up
-        </button>
-        <button class="bg-agility-primary text-white px-4 py-2 rounded-lg hidden md:block rounded-[5px] w-[120px]">
-            Log In
-        </button>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col items-start px-2 mt-2 space-y-2">
+            <a href="/" class="block text-agility-primary hover:text-blue-600">Home</a>
+            <a href="about.html" class="block text-agility-primary hover:text-blue-600">About</a>
+            <a href="service.html" class="block text-agility-primary hover:text-blue-600">Service</a>
+            <a href="contact.html" class="block text-agility-primary hover:text-blue-600">Contact</a>
+            <a href="./authentication page/splash.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Sign Up</a>
+            <a href="./authentication page/log in.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Log In</a>
+        </div>
     </nav>
     <!-- About Us -->
     <section class="sec-1">
@@ -137,10 +155,76 @@
                 </div>
             </div>
             <div class="skil-1">
+<<<<<<< HEAD
                 <img src="../Skill-Innov8/assets/images/iPhone 12 Mini.png" alt="Phone Screen" />
+=======
+                <img src="./assets/images/iPhone 12 Mini.png" alt="Phone Screen" />
+>>>>>>> origin/main
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white border-t border-blue-100 py-12 px-2 sm:px-4 font-montserrat">
+        <!-- Logo and Socials Section-->
+        <div class="max-w-screen-lg mx-auto flex">
+            <div class="grow flex">
+                <img src="assets/images/logo.svg" alt="Logo" class="my-auto mr-4">
+                <div class="text-lg my-auto text-agility-primary font-bold">SKILLS-INNOV8</div>
+            </div>
+            <div class="flex w-[100px] h-[24px] my-auto justify-between">
+                <img src="assets/icons/facebook.png" class="cursor-pointer" />
+                <img src="assets/icons/instagram.png" class="cursor-pointer" />
+                <img src="assets/icons/twitter.png" class="cursor-pointer" />
+            </div>
+        </div>
+        <div class="max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-sm py-8">
+
+            <!-- Footer Columns -->
+            <div>
+                <h4 class="mb-3 font-bold">Company Info</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Follow us</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Quick Links</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Get In Touch</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li>Skillsinnov8@gmail.com</li>
+                    <li><a href="#">Download our App</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-screen-lg w-full mx-auto flex text-agility-primary font-bold text-[12px] mb-6">
+            Skills-Innov8 Company. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Toggle navbar on mobile -->
+    <script src="scripts/navbar.js"></script>
 </body>
 
 </html>

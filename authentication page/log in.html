@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills-Innov8 Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="relative w-full h-screen overflow-hidden">
+        <!-- Main background container -->
+        <div class="absolute inset-0 w-full h-full bg-gray-200">
+            <img id="backgroundImage" src="./Rectangle 202.png" alt="Background" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Main content wrapper -->
+        <div class="relative z-10 flex items-center justify-center h-screen px-4">
+            <!-- Left side welcome text - only visible on large screens -->
+            <div class="hidden lg:block lg:w-1/2 pr-8 text-white">
+                <h1 class="text-4xl font-bold mb-4">Welcome to Skills-Innov8!</h1>
+                <p class="text-xl">
+                    We're excited to have you on board!<br>
+                    Skills-Innov8 is a platform that connects students with companies and organizations willing to provide internship opportunities. Our goal is to bridge the gap between academia and industry, giving students the chance to gain practical experience and build their skills.
+                </p>
+            </div>
+            
+            <!-- Login Form Container -->
+            <div class="w-full max-w-md lg:w-1/2">
+                <div class="bg-white bg-opacity-90 rounded-lg shadow-xl p-8">
+                    <h2 class="text-2xl font-bold text-center mb-6">Welcome Back!</h2>
+                    
+                    <!-- OAuth login options -->
+                    <div class="mb-6">
+                        <p class="text-center mb-4">Log in with</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="w-12 h-12 flex items-center justify-center rounded-md border border-gray-300 hover:bg-gray-100">
+                                <img src="./devicon_google.png" alt="Google" class="w-6 h-6" id="googleIcon">
+                            </button>
+                            <button class="w-12 h-12 flex items-center justify-center rounded-md border border-gray-300 hover:bg-gray-100">
+                                <img src="./ei_sc-linkedin.png" alt="LinkedIn" class="w-6 h-6" id="linkedinIcon">
+                            </button>
+                            <button class="w-12 h-12 flex items-center justify-center rounded-md border border-gray-300 hover:bg-gray-100">
+                                <img src="./devicon_apple.png" alt="Apple" class="w-6 h-6" id="appleIcon">
+                            </button>
+                        </div>
+                        <div class="flex items-center my-4">
+                            <div class="flex-1 border-t border-gray-300"></div>
+                            <div class="px-4 text-gray-500">Or</div>
+                            <div class="flex-1 border-t border-gray-300"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Traditional email/password login form -->
+                    <form id="loginForm">
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-lg font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter Email Address" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="password" class="block text-gray-700 text-lg font-medium mb-2">Password</label>
+                            <div class="relative">
+                                <input type="password" id="password" placeholder="Enter Password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <button type="button" id="togglePassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                    <i class="fa-regular fa-eye" id="eyeIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="remember" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                <label for="remember" class="ml-2 text-sm text-gray-700">Remember me</label>
+                            </div>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">Forget Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition duration-300">
+                            Log in
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // My password toggle functionality
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        });
+
+        // Handle form submission - to be connected with backend later
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // TODO: Connect to authentication API
+            console.log('Login attempt:', { email, password });
+            
+            // Temp alert for development
+            alert('Login functionality would be implemented here');
+        });
+
+        // Load appropriate icons when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // TODO: Replace with actual icon paths
+            document.getElementById('googleIcon').src = "./devicon_google.png"; 
+            document.getElementById('linkedinIcon').src = "./ei_sc-linkedin.png"; 
+            document.getElementById('appleIcon').src = "./devicon_apple.png"; 
+            document.getElementById('backgroundImage').src = "./Rectangle 202.png";
+        });
+    </script>
+</body>
+</html>

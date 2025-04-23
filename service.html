@@ -1,25 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills-Innov8</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/css/tabler.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
+  <script src="scripts/tailwind.js"></script>
 </head>
-<body>
+<body class="bg-white w-full">
+   <!-- Navbar -->
+   <nav class="px-6 py-6 shadow-md font-roboto sticky top-0 bg-white z-50">
+    <div class="flex items-center justify-between gap-12 max-w-screen-lg mx-auto w-full">
+        <!-- Group 6 Logo -->
+        <div class="flex items-center">
+            <img src="assets/images/logo.svg" alt="Logo" />
+            <div class="text-xl font-bold text-agility-secondary font-montserrat ml-2">
+                Skills-Innov8
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-4 mx-auto w-[366px] text-lg">
+            <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
+            <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
+            <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
+            <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+        </div>
+
+        <!-- Desktop Buttons -->
+       <div class="hidden md:flex space-x-2">
+            <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+             Sign Up
+            </a>
+            <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+             Log In
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <svg class="w-6 h-6 text-agility-primary" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col items-start px-2 mt-2 space-y-2">
+        <a href="/" class="block text-agility-primary hover:text-blue-600">Home</a>
+        <a href="about.html" class="block text-agility-primary hover:text-blue-600">About</a>
+        <a href="service.html" class="block text-agility-primary hover:text-blue-600">Service</a>
+        <a href="contact.html" class="block text-agility-primary hover:text-blue-600">Contact</a>
+        <a href="./authentication page/splash.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Sign Up</a>
+        <a href="./authentication page/log in.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Log In</a>
+    </div>
+</nav>
+
     <main>
-        <section class="font-Poppins bg-gradient-to-r from-[#BBD2FF] via-[#F0F5FF] to-[#FFFFFF] w-full h-80 flex flex-col items-center justify-center gap-4">
+        <section class="font-Poppins bg-gradient-to-r from-[#BBD2FF] via-[#F0F5FF] to-[#FFFFFF] w-full h-[500px] flex flex-col items-center justify-center gap-4">
             <div class="max-w-5xl mx-auto text-center">
               <div class="inline-block mb-12">
-                <a href="#" class="inline-block">
-                  <h2 class="bg-[#193894B2] text-white font-semibold py-3 px-10 rounded-full text-xl hover:bg-blue-700 transition-colors">Our Service</h2>
+                <a href="#" class="inline-block no-underline hover:no-underline">
+                  <h2 class="bg-[#193894B2] text-white font-semibold py-3 px-10 rounded-full text-xl transition-colors">Our Service</h2>
                 </a>
               </div>
               
-              <p class="text-gray-800 text-xl md:text-2xl font-medium leading-relaxed max-w-4xl mx-auto">
+              <p class="text-gray-800 text-xl md:text-2xl font-bold leading-8 max-w-4xl mx-auto">
                 At Skillis-Innov8, we bridge the gap between students, institutions, and companies by providing a seamless digital experience for industrial training (SIWES)
               </p>
             </div>
@@ -28,44 +84,52 @@
           <section class="font-Roboto py-16 px-4 max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16">We Offer</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
               <!-- Card 1 -->
-              <div class="flex flex-col">
-                <div class="rounded-2xl overflow-hidden mb-4">
-                  <img src="assets/images/streamline.png" alt="Students working on laptops" class="w-[605px] h-[385px] object-cover"/>
+              <div class="flex flex-col max-w-[605px]">
+                <div class="rounded-2xl overflow-hidden mb-4 max-w-[605px]">
+                  <img src="assets/images/streamline.png" alt="Students working on laptops" class="w-full h-[350px] object-cover"/>
                 </div>
-                <h3 class="text-3xl font-bold mb-2">Streamlined SIWES Placement with Smart Matching</h3>
-                <p class="text-base text-black font-normal tracking-wide leading-[42px]">
+                <div class="max-w-[605px]">
+                  <h3 class="text-3xl font-bold mb-2">Streamlined SIWES Placement with Smart Matching</h3>
+                  <p class="text-base text-black font-normal tracking-wide leading-[42px]">
                   Provides a centralized platform for students to browse and apply for placements, track application status in real-time, and get matched to relevant opportunities using smart algorithms.
-                </p>
+                  </p>
+                </div>
               </div>
               
               <!-- Card 2 -->
-              <div class="flex flex-col">
-                <div class="rounded-2xl overflow-hidden mb-4">
-                  <img src="assets/images/empower.png" alt="Business professionals shaking hands" class="w-[605px] h-[385px] object-cover"/>
+              <div class="flex flex-col max-w-[605px]">
+                <div class="rounded-2xl overflow-hidden mb-4 max-w-[605px]">
+                  <img src="assets/images/empower.png" alt="Business professionals shaking hands" class="w-full h-[350px] object-cover"/>
                 </div>
-                <h3 class="text-3xl font-bold mb-2">Empowering Companies to Hire, Manage, and Mentor Interns Effortlessly</h3>
-                <p class="text-base text-black font-normal tracking-wide leading-[42px]">
+                <div class="max-w-[605px]">
+                  <h3 class="text-3xl font-bold mb-2">Empowering Companies to Hire, Manage, and Mentor Interns Effortlessly</h3>
+                  <p class="text-base text-black font-normal tracking-wide leading-[42px]">
                   Offers real-time reporting for regulatory bodies, AI-powered fraud detection for internship verification, and data analytics dashboards to assess SIWES impact across institutions
-                </p>
+                  </p>  
+                </div>
+                
               </div>
               
               <!-- Card 3 -->
-              <div class="flex flex-col">
-                <div class="rounded-2xl overflow-hidden mb-4">
-                  <img src="assets/images/student.png" alt="Students collaborating on a laptop" class="w-[605px] h-[385px] object-cover"/>
+              <div class="flex flex-col max-w-[605px]">
+                <div class="rounded-2xl overflow-hidden mb-4 max-w-[605px]">
+                  <img src="assets/images/student.png" alt="Students collaborating on a laptop" class="w-full h-[350px] object-cover"/>
                 </div>
-                <h3 class="text-3xl font-bold mb-2">Ensuring Transparency and Accountability in SIWES</h3>
+                <div class="max-w-[605px]">
+                  <h3 class="text-3xl font-bold mb-2">Ensuring Transparency and Accountability in SIWES</h3>
                 <p class="text-base text-black font-normal tracking-wide leading-[42px]">
                   Offers real-time reporting for regulatory bodies, AI-powered fraud detection for internship verification, and data analytics dashboards to assess SIWES impact across institutions
                 </p>
+                </div>
+                
               </div>
               
               <!-- Card 4 -->
-              <div class="flex flex-col">
+              <div class="flex flex-col max-w-[605px]">
                 <div class="rounded-2xl overflow-hidden mb-4">
-                  <img src="assets/images/group.png" alt="Students celebrating success" class="w-[605px] h-[385px] object-cover"/>
+                  <img src="assets/images/group.png" alt="Students celebrating success" class="w-full h-[350px] object-cover"/>
                 </div>
                 <h3 class="text-3xl font-bold mb-2">Integrated Learning for Career-Ready Students</h3>
                 <p class="text-base text-black font-normal tracking-wide leading-[42px]">
@@ -74,6 +138,111 @@
               </div>
             </div>
           </section>
+
+            <div class="max-w-5xl mx-auto pb-8">
+              <section class="bg-blue-800 text-white py-16 px-8 text-center">
+                <h2 class="text-6xl tracking-[0.2px] leading-[100px] font-bold mb-4">Download Now</h2>
+                
+                <p class="text-xl leading-[30px] tracking-[0.2px] mb-10">
+                  stay informed with real-time updates, and<br>
+                  take control of your SIWES experience."
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                  
+                  <a href="#" class="inline-block no-underline hover:no-underline">
+                    <div class="bg-white text-black py-2 px-4 rounded-lg flex items-center">
+                      <div class="mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+                          <path fill="#4db6ac" d="M7.705,4.043C7.292,4.15,7,4.507,7,5.121c0,1.802,0,18.795,0,18.795S7,42.28,7,43.091c0,0.446,0.197,0.745,0.5,0.856l20.181-20.064L7.705,4.043z"></path><path fill="#dce775" d="M33.237,18.36l-8.307-4.796c0,0-15.245-8.803-16.141-9.32C8.401,4.02,8.019,3.961,7.705,4.043l19.977,19.84L33.237,18.36z"></path><path fill="#d32f2f" d="M8.417,43.802c0.532-0.308,15.284-8.825,24.865-14.357l-5.601-5.562L7.5,43.947C7.748,44.038,8.066,44.004,8.417,43.802z"></path><path fill="#fbc02d" d="M41.398,23.071c-0.796-0.429-8.1-4.676-8.1-4.676l-0.061-0.035l-5.556,5.523l5.601,5.562c4.432-2.559,7.761-4.48,8.059-4.653C42.285,24.248,42.194,23.5,41.398,23.071z"></path>
+                          </svg>
+                      </div>
+                      <div class="text-left">
+                        <div class="text-xs">Download on the</div>
+                        <div class="font-semibold">Google Play</div>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  
+                  <a href="#" class="inline-block no-underline hover:no-underline">
+                    <div class="bg-white text-black py-2 px-4 rounded-lg flex items-center">
+                      <div class="mr-2">
+                        <svg width="24" height="24" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" fill="black"/>
+                        </svg>
+                      </div>
+                      <div class="text-left">
+                        <div class="text-xs">Download on the</div>
+                        <div class="font-semibold">Apple Store</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
     </main>
+
+     <!-- Footer Section -->
+     <footer class="bg-white border-t border-blue-100 py-12 px-2 sm:px-4 font-montserrat">
+      <!-- Logo and Socials Section-->
+      <div class="max-w-screen-lg mx-auto flex">
+          <div class="grow flex">
+              <img src="assets/images/logo.svg" alt="Logo" class="my-auto mr-4">
+              <div class="text-lg my-auto text-agility-primary font-bold">SKILLS-INNOV8</div>
+          </div>
+          <div class="flex w-[100px] h-[24px] my-auto justify-between">
+              <img src="assets/icons/facebook.png" class="cursor-pointer" />
+              <img src="assets/icons/instagram.png" class="cursor-pointer" />
+              <img src="assets/icons/twitter.png" class="cursor-pointer" />
+          </div>
+      </div>
+      <div class="max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-sm py-8">
+
+          <!-- Footer Columns -->
+          <div>
+              <h4 class="mb-3 font-bold">Company Info</h4>
+              <ul class="space-y-2 text-gray-600 font-semibold">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Carrier</a></li>
+              </ul>
+          </div>
+
+          <div>
+              <h4 class="mb-3 font-bold">Follow us</h4>
+              <ul class="space-y-2 text-gray-600 font-semibold">
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+              </ul>
+          </div>
+
+          <div>
+              <h4 class="mb-3 font-bold">Quick Links</h4>
+              <ul class="space-y-2 text-gray-600 font-semibold">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+
+          <div>
+              <h4 class="mb-3 font-bold">Get In Touch</h4>
+              <ul class="space-y-2 text-gray-600 font-semibold">
+                  <li>Skillsinnov8@gmail.com</li>
+                  <li><a href="#">Download our App</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="max-w-screen-lg w-full mx-auto flex text-agility-primary font-bold text-[12px] mb-6">
+          Skills-Innov8 Company. All Rights Reserved
+      </div>
+  </footer>
+
+  <!-- Toggle navbar on mobile -->
+  <script src="scripts/navbar.js"></script>
 </body>
 </html>

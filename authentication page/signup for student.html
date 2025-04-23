@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills-Innov8 - Create Student Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1a3a8f',
+                        'brand-blue-dark': '#15307a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    <div class="flex min-h-screen">
+        <!-- Left side - Image -->
+        <div class="hidden md:block md:w-1/2 bg-cover bg-center" style="background-image: url('./college-students-different-ethnicities-cramming\ 1.png')">
+        </div>
+
+        <!-- Right side - Form -->
+        <div class="w-full md:w-1/2 p-8 flex flex-col">
+            <!-- Back button -->
+            <div class="mb-8">
+                <a href="splash.html" class="flex items-center text-gray-700 hover:text-brand-blue">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back
+                </a>
+            </div>
+
+            <!-- Form content -->
+            <div class="max-w-lg mx-auto flex-grow flex flex-col justify-center">
+                <h1 class="text-3xl font-bold mb-2 text-center">Create a Student Account</h1>
+                <p class="text-gray-600 mb-6 text-center">Let's get you set up for a seamless SIWES experience.</p>
+
+                <!-- Social sign up buttons -->
+                <div class="text-center mb-4">
+                    <p class="text-gray-700 mb-4">Sign up with</p>
+                    <div class="flex justify-center space-x-4">
+                        <button class="flex items-center justify-center p-2 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-200 w-16 h-16">
+                            <img src="./devicon_google.png" alt="Sign up with Google" class="w-8 h-8">
+                        </button>
+                        <button class="flex items-center justify-center p-2 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-200 w-16 h-16">
+                            <img src="./devicon_apple.png" alt="Sign up with Apple" class="w-8 h-8">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="flex items-center text-gray-500 my-4">
+                    <div class="flex-1 border-t border-gray-300"></div>
+                    <span class="px-4">Or</span>
+                    <div class="flex-1 border-t border-gray-300"></div>
+                </div>
+
+                <form id="student-registration-form" class="space-y-6">
+                    <!-- Email Address -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent" required>
+                    </div>
+
+                    <!-- Institutional ID -->
+                    <div>
+                        <label for="institutional-id" class="block text-sm font-medium text-gray-700 mb-1">Institutional ID</label>
+                        <input type="text" id="institutional-id" name="institutional-id" placeholder="Enter your ID e.g matric no." 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent" required>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+                        <label for="confirm-password" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Create a secure password" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent" required>
+                    </div>
+
+                    <!-- Terms and Conditions -->
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-brand-blue focus:ring-brand-blue border-gray-300 rounded" required>
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="terms" class="font-medium text-gray-700">I agree to the 
+                                <a href="#" class="text-brand-blue hover:underline">Terms</a> and 
+                                <a href="#" class="text-brand-blue hover:underline">Conditions</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-4 rounded-md transition duration-200">Sign up</button>
+                </form>
+
+                <!-- Login Link -->
+                <div class="text-center mt-6">
+                    <p class="text-gray-600">
+                        Already have an account? 
+                        <a href="#" class="text-brand-blue font-semibold hover:underline">Log In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('student-registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const email = document.getElementById('email').value;
+            const institutionalId = document.getElementById('institutional-id').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const termsAccepted = document.getElementById('terms').checked;
+            
+            // Basic validation
+            if (!email || !institutionalId || !password || !confirmPassword) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            if (!termsAccepted) {
+                alert('Please accept the Terms and Conditions');
+                return;
+            }
+            
+            // If validation passes, you would typically send this data to your server
+            console.log('Form submitted successfully', {
+                email,
+                institutionalId,
+                password,
+                termsAccepted
+            });
+            
+            // For demo purposes, show success message
+            alert('Account created successfully!');
+            
+            // Redirect to dashboard or login page
+        });
+        
+        // Social sign-in handlers
+        document.querySelectorAll('.social-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const provider = this.querySelector('img').alt.includes('Google') ? 'Google' : 'Apple';
+                console.log(`Signing up with ${provider}`);
+                
+                // In a real application, you would initiate OAuth flow here
+                alert(`${provider} sign-up initiated. This would redirect to ${provider}'s authentication page.`);
+            });
+        });
+        
+        // Password validation
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            // Add password strength indicator logic here if needed
+        });
+        
+        // Confirm password validation
+        document.getElementById('confirm-password').addEventListener('input', function() {
+            const confirmPassword = this.value;
+            const password = document.getElementById('password').value;
+            
+            if (confirmPassword && password && confirmPassword !== password) {
+                this.setCustomValidity('Passwords do not match');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html>

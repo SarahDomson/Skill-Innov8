@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills-Innov8 - Create Employer Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-blue": "#1a3a8f",
+              "brand-blue-dark": "#15307a",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased">
+    <div class="flex min-h-screen">
+      <!-- Left side - Image -->
+      <div
+        class="hidden md:block md:w-1/2 bg-cover bg-center"
+        style="
+          background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame%2021-ep3bqh2jOq3i7OlVNerAq5IRUTeb8D.png');
+        "
+      ></div>
+
+      <!-- Right side - Form -->
+      <div class="w-full md:w-1/2 p-8 flex flex-col">
+        <!-- Back button -->
+        <div class="mb-8">
+          <a
+            href="splash.html"
+            class="flex items-center text-gray-700 hover:text-brand-blue"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+            Back
+          </a>
+        </div>
+
+        <!-- Form content -->
+        <div class="max-w-lg mx-auto flex-grow flex flex-col justify-center">
+          <h1 class="text-3xl font-bold mb-2">Create an Employer Account</h1>
+          <p class="text-gray-600 mb-8">
+            Let's get you set up for a seamless SIWES experience.
+          </p>
+
+          <form id="employer-registration-form" class="space-y-6">
+            <!-- Company Name -->
+            <div>
+              <label
+                for="company-name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Company Name</label
+              >
+              <input
+                type="text"
+                id="company-name"
+                name="company-name"
+                placeholder="Enter your registered business name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                required
+              />
+            </div>
+
+            <!-- Business Email -->
+            <div>
+              <label
+                for="business-email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Business Email</label
+              >
+              <input
+                type="email"
+                id="business-email"
+                name="business-email"
+                placeholder="Enter a valid official email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                required
+              />
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a secure password"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                required
+              />
+            </div>
+
+            <!-- Confirm Password -->
+            <div>
+              <label
+                for="confirm-password"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Create a secure password"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                required
+              />
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="flex items-start">
+              <div class="flex items-center h-5">
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  class="h-4 w-4 text-brand-blue focus:ring-brand-blue border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="terms" class="font-medium text-gray-700"
+                  >I agree to the
+                  <a href="#" class="text-brand-blue hover:underline">Terms</a>
+                  and
+                  <a href="#" class="text-brand-blue hover:underline"
+                    >Conditions</a
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-4 rounded-md transition duration-200"
+            >
+              Create Account
+            </button>
+          </form>
+
+          <!-- Login Link -->
+          <div class="text-center mt-6">
+            <p class="text-gray-600">
+              Already have an account?
+              <a href="#" class="text-brand-blue font-semibold hover:underline"
+                >Log In</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("employer-registration-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const companyName = document.getElementById("company-name").value;
+          const businessEmail = document.getElementById("business-email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
+          const termsAccepted = document.getElementById("terms").checked;
+
+          // Basic validation
+          if (!companyName || !businessEmail || !password || !confirmPassword) {
+            alert("Please fill in all fields");
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return;
+          }
+
+          if (!termsAccepted) {
+            alert("Please accept the Terms and Conditions");
+            return;
+          }
+
+          // If validation passes, you would typically send this data to your server
+          console.log("Form submitted successfully", {
+            companyName,
+            businessEmail,
+            password,
+            termsAccepted,
+          });
+
+          // For demo purposes, show success message
+          alert("Account created successfully!");
+
+          // Redirect to dashboard or login page
+          // window.location.href = '/dashboard';
+        });
+
+      // Password validation
+      document
+        .getElementById("password")
+        .addEventListener("input", function () {
+          const password = this.value;
+          // Add password strength indicator logic here if needed
+        });
+
+      // Confirm password validation
+      document
+        .getElementById("confirm-password")
+        .addEventListener("input", function () {
+          const confirmPassword = this.value;
+          const password = document.getElementById("password").value;
+
+          if (confirmPassword && password && confirmPassword !== password) {
+            this.setCustomValidity("Passwords do not match");
+          } else {
+            this.setCustomValidity("");
+          }
+        });
+    </script>
+  </body>
+</html>

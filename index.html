@@ -11,42 +11,393 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "agility-primary": '#193894',
-                        "agility-secondary": '#252B42',
-                    },
-                    fontFamily: {
-                        roboto: ['Roboto', 'sans-serif'],
-                        montserrat: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/css/tabler.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
+    <script src="scripts/tailwind.js"></script>
 </head>
 
-<body class="bg-white">
+<body class="bg-white w-full">
     <!-- Navbar -->
-    <nav class="flex items-center px-6 py-4 shadow-md font-roboto">
-        <img src="assets/images/logo.svg" />
-        <div class="text-xl font-bold text-agility-secondary font-montserrat font-[700] ml-2">Skills-Innov8</div>
-        <div class="space-x-4 hidden md:flex mx-auto w-[366px]">
-            <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
-            <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
-            <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
-            <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+    <nav class="px-6 py-6 shadow-md font-roboto sticky top-0 bg-white z-50">
+        <div class="flex items-center justify-between gap-12 max-w-screen-lg mx-auto w-full">
+            <!-- Group 6 Logo -->
+            <div class="flex items-center">
+                <img src="assets/images/logo.svg" alt="Logo" />
+                <div class="text-xl font-bold text-agility-secondary font-montserrat ml-2">
+                    Skills-Innov8
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4 mx-auto w-[366px] text-lg">
+                <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
+                <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
+                <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+            </div>
+
+            <!-- Desktop Buttons -->
+           <div class="hidden md:flex space-x-2">
+                <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                 Sign Up
+                </a>
+                <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                 Log In
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-agility-primary" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <button class="bg-agility-primary text-white mr-4 px-4 py-2 rounded-lg hidden md:block rounded-[5px] w-[120px]">
-            Sign Up
-        </button>
-        <button class="bg-agility-primary text-white px-4 py-2 rounded-lg hidden md:block rounded-[5px] w-[120px]">
-            Log In
-        </button>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col items-start px-2 mt-2 space-y-2">
+            <a href="/" class="block text-agility-primary hover:text-blue-600">Home</a>
+            <a href="about.html" class="block text-agility-primary hover:text-blue-600">About</a>
+            <a href="service.html" class="block text-agility-primary hover:text-blue-600">Service</a>
+            <a href="contact.html" class="block text-agility-primary hover:text-blue-600">Contact</a>
+            <a href="./authentication page/splash.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Sign Up</a>
+            <a href="./authentication page/log in.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Log In</a>
+        </div>
     </nav>
+
+    <section class="px-2 sm:px-0 py-16 flex flex-col md:flex-row font-roboto w-full min-h-[490px]"
+        style="background: conic-gradient(from -45.28deg at 61.07% 61.25%, #BBD2FF 0deg, #FFFFFF 54.37deg, #F0F5FF 121.29deg, #BBD2FF 360deg);">
+        <div class="max-w-screen-lg mx-auto flex flex-col-reverse sm:flex-row w-full">
+            <div class="grow mt-[400px] sm:mt-0">
+                <h1 class="leading-[24px] text-agility-primary font-bold font-montserrat md:mb-5">Skills-Innov8</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-[#100F0F] leading-[]">Manage Your SIWES With Ease</h1>
+                <p class="text-gray-700">Connect with Institutions and Companies in one simple platform</p>
+                <div class="flex pt-2 justify-between w-full max-w-[440px]">
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white shadow-md rounded-[12px]">
+                        <div class="flex w-full">
+                            <img src="assets/icons/playstore-icon.png" class="w-[30px] h-[30px] my-auto" />
+                            <div class="text-left pl-2">
+                                <p class="text-[12px]">Get it on</p>
+                                <p class="font-bold text-[16px]">Google Play</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white shadow-md rounded-[12px]">
+                        <div class="flex w-full">
+                            <img src="assets/icons/apple-icon.png" class="w-[30px] h-[30px] my-auto" />
+                            <div class="text-left pl-2">
+                                <p class="text-[12px]">Download on the</p>
+                                <p class="font-bold text-[16px]">Apple Store</p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 mb-10 md:mb-0 relative">
+                <!-- BACKGROUND IMAGES -->
+                <div class="absolute left-[68%] top-[8vh] z-0 h-fit w-full -translate-x-1/2 transform">
+                    <div class="flex w-full">
+                        <img src="assets/icons/home-icons/ellipse-26.png" alt="ellipse bg 1" class="w-[300px]" />
+                    </div>
+                </div>
+
+                <div class="absolute left-[20%] top-[5vh] z-0 h-fit w-fit -translate-x-1/2 transform">
+                    <div class="flex w-full">
+                        <img src="assets/icons/home-icons/ellipse-26-1.png" alt="ellipse bg 2" />
+                    </div>
+                </div>
+
+                <div class="absolute left-[80%] top-[20vh] z-0 h-fit w-fit -translate-x-1/2 transform">
+                    <div class="flex w-full">
+                        <img src="assets/icons/home-icons/ellipse-26-2.png" alt="ellipse bg 2" />
+                    </div>
+                </div>
+
+                <div class="absolute left-[85%] top-[5vh] z-0 h-fit w-fit -translate-x-1/2 transform">
+                    <div class="flex w-full">
+                        <img src="assets/icons/home-icons/ellipse-26-3.png" alt="ellipse bg 2" />
+                    </div>
+                </div>
+
+                <div class="absolute left-[20%] top-[82%] z-10 h-fit w-fit -translate-x-1/2 transform">
+                    <div class="flex w-full">
+                        <img src="assets/icons/home-icons/ellipse-26-4.png" alt="ellipse bg 2" />
+                    </div>
+                </div>
+                <div class="absolute left-[62%] z-0 h-fit w-full -translate-x-1/2 transform">
+                    <img src="assets/images/homepage-cover.png" alt="Student" width="400px" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-8 bg-white w-full px-2 sm:px-0">
+        <div
+            class="mx-4 px-6 py-12 text-center flex flex-col md:flex-row justify-around shadow-md rounded-[12px] max-w-screen-lg mx-auto">
+            <div>
+                <h2 class="text-3xl font-bold mb-2">1.5M+</h2>
+                <p class="text-gray-600">Participate Every Year</p>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-2">100%</h2>
+                <p class="text-gray-600">Service Guaranteed</p>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-2">36</h2>
+                <p class="text-gray-600">States in Nigeria</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-2 sm:px-6 py-12 text-center max-w-screen-lg mx-auto">
+        <h2 class="text-3xl font-bold mb-6">WHY USE OUR APP</h2>
+        <div class="sm:grid sm:grid-cols-3 gap-8">
+            <div class="mb-8 sm:mb-0 ">
+                <img src="assets/icons/book.png" alt="Icon Book" class="mx-auto mb-4">
+                <h3 class="font-semibold text-lg text-center">No Stress finding a Place for your SIWES</h3>
+                <p class="text-gray-600">Find the perfect SIWES placement with ease.</p>
+            </div>
+            <div class="mb-8 sm:mb-0">
+                <img src="assets//icons/network.png" alt="Icon Network" class="mx-auto mb-4">
+                <h3 class="font-semibold text-lg">Connect with Supervisor easily</h3>
+                <p class="text-gray-600">Get in touch with school or company supervisors in real time, no need to wait
+                    for email replies.</p>
+            </div>
+            <div>
+                <img src="assets/icons/trend.png" alt="Icon Trend" class="mx-auto mb-4">
+                <h3 class="font-semibold text-lg">Track Internship Progress</h3>
+                <p class="text-gray-600">Stay arranged with daily, weekly or monthly reporting features from your phone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-agility-primary">
+        <div class="sm:grid sm:grid-cols-2 gap-12 items-center text-white mb-10 max-w-screen-lg mx-auto px-2 sm:px-0 ">
+            <img src="assets/images/siwes-place.png" alt="App Screenshot">
+            <div class="w-full">
+                <h3 class="text-[40px] leading-[1.2] font-bold mb-4">No stress finding a place for your SIWES</h3>
+                <p class="text-lg">We connect you with verified companies and institutions that match your course of
+                    study, No more last-minute searches or endless paperwork. Apply, manage, and track your internship
+                    journey.</p>
+                <a href="#">
+                    <button class="mt-4 w-[210px] h-[64px] py-[8px] px-[24px] bg-white hover:shadow-md rounded-[12px]">
+                        <div class="flex w-full justify-center text-agility-primary">
+                            <p class="font-bold text-lg">Get Started Now</p>
+                        </div>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="flex items-center max-w-screen-lg mx-auto flex-col-reverse sm:flex-row px-2 sm:px-4">
+            <div class="sm:w-1/2">
+                <h3 class="text-[40px] leading-[1.2] mb-4">Connect with Supervisor Easily</h3>
+                <p class="text-gray-600">No more waiting for emails or chasing signatures. Chat with your school or
+                    company supervisor directly in the app. Send updates, ask questions, and get feedback in real time.
+                    Stay aligned and on track throughout your internship.</p>
+                <div class="flex justify-between pt-2 text-black max-w-[440px]">
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-agility-primary text-white shadow-md rounded-[12px]">
+                        <div class="flex w-full justify-center">
+                            <p class="font-bold text-lg">Try Now</p>
+
+                        </div>
+                    </button>
+
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white hover:shadow-md rounded-[12px]">
+                        <div class="flex w-full justify-center">
+                            <p class="font-bold text-lg">Learn More</p>
+                            <img src="assets/icons/arrow-next.png" class="ml-3" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="sm:w-1/2">
+                <img src="assets/images/connect-supervisor.png" alt="Connect to Supervisor" class="mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="flex items-center mt-12 max-w-screen-lg mx-auto flex-col sm:flex-row px-2 sm:px-4">
+            <div class="sm:w-1/2">
+                <img src="assets/images/track-internship.png" alt="Internship Progress" class="mx-auto">
+            </div>
+            <div class="sm:w-1/2">
+                <h3 class="text-[40px] leading-[1.2] mb-4">Track Internship Progress</h3>
+                <p class="text-gray-600">Stay organized and in control of your SIWES journey. Log your daily or weekly
+                    activities, submit reports, and monitor your milestones in one place. Get automatic reminders,
+                    real-time status updates, and a clear view of your progress.</p>
+                <div class="flex justify-between pt-2 text-black max-w-[440px]">
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-agility-primary text-white shadow-md rounded-[12px]">
+                        <div class="flex w-full justify-center">
+                            <p class="font-bold text-lg">Try Now</p>
+
+                        </div>
+                    </button>
+
+                    <button
+                        class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white hover:shadow-md rounded-[12px]">
+                        <div class="flex w-full justify-center">
+                            <p class="font-bold text-lg">Learn More</p>
+                            <img src="assets/icons/arrow-next.png" class="ml-3" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-agility-primary py-16 text-center text-white overflow-hidden px-2 sm:px-4">
+        <h2 class="text-[40px] leading-[1.2] font-bold mb-6">Take a look at the App</h2>
+        <p>Problems trying to resolve the conflict between
+            the two major realms of Classical physics: Newtonian mechanics </p>
+        <img src="assets/images/take-a-look.png" alt="App Preview" class="mx-auto mb-6">
+        <div class="flex pt-2 justify-between w-full text-black max-w-[440px] mx-auto">
+            <button class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white shadow-md rounded-[12px]">
+                <div class="flex w-full">
+                    <img src="assets/icons/playstore-icon.png" class="w-[30px] h-[30px] my-auto" />
+                    <div class="text-left pl-2">
+                        <p class="text-[12px]">Get it on</p>
+                        <p class="font-bold text-[16px]">Google Play</p>
+                    </div>
+                </div>
+            </button>
+
+            <button class="w-[45vw] sm:w-[210px] h-[64px] py-[8px] px-2 sm:px-[24px] bg-white shadow-md rounded-[12px]">
+                <div class="flex w-full">
+                    <img src="assets/icons/apple-icon.png" class="w-[30px] h-[30px] my-auto" />
+                    <div class="text-left pl-2">
+                        <p class="text-[12px]">Download on the</p>
+                        <p class="font-bold text-[16px]">Apple Store</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="px-6 py-16 bg-gray-100">
+        <div class="w-full max-w-screen-lg mx-auto">
+            <h2 class="text-[40px] leading-[1.2] text-center mb-10">What Clients Say</h2>
+            <p>Ensuring a smooth and stable connection between students, companies, and institutions. It bridges the
+                communication gap, simplifies coordination, and keeps everyone updated throughout the SIWES journey.
+            </p>
+            <div class="flex flex-col sm:grid sm:grid-cols-3 sm:gap-8 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow mb-4">
+                    <p class="mb-4">"SIWES placement was stressful, until Skills-Innov8. I applied and got accepted
+                        within a week. So easy!"</p>
+                    <div class="flex">
+                        <img src="assets/images/profile-monica.png" class="w-[64px] h-[64px]" />
+                        <div class="pl-2">
+                            <p class="font-bold text-agility-primary">Monica Philip</p>
+                            <p class="font-bold">Student</p>
+                            <p>Ahmadu Bello University</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow mb-4">
+                    <p class="mb-4">“Skills-Innov8 made student placement and reporting effortless, it's the future of
+                        SIWES."</p>
+                    <div class="flex">
+                        <img src="assets/images/profile-musa.png" class="w-[64px] h-[64px]" />
+                        <div class="pl-2">
+                            <p class="font-bold text-agility-primary">Dr Musa Adewale</p>
+                            <p class="font-bold">SIWES Coordinator</p>
+                            <p>Crescent University</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow mb-4">
+                    <p class="mb-4">“Skillis-Innov8 made SIWES simple—with matched applications and easy institution
+                        connection."</p>
+                    <div class="flex">
+                        <img src="assets/images/profile-peter.png" class="w-[64px] h-[64px]" />
+                        <div class="pl-2">
+                            <p class="font-bold text-agility-primary">Peter John</p>
+                            <p class="font-bold">HR Manager</p>
+                            <p>Unilever Company</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white border-t border-blue-100 py-12 px-2 sm:px-4 font-montserrat">
+        <!-- Logo and Socials Section-->
+        <div class="max-w-screen-lg mx-auto flex">
+            <div class="grow flex">
+                <img src="assets/images/logo.svg" alt="Logo" class="my-auto mr-4">
+                <div class="text-lg my-auto text-agility-primary font-bold">SKILLS-INNOV8</div>
+            </div>
+            <div class="flex w-[100px] h-[24px] my-auto justify-between">
+                <img src="assets/icons/facebook.png" class="cursor-pointer" />
+                <img src="assets/icons/instagram.png" class="cursor-pointer" />
+                <img src="assets/icons/twitter.png" class="cursor-pointer" />
+            </div>
+        </div>
+        <div class="max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-sm py-8">
+
+            <!-- Footer Columns -->
+            <div>
+                <h4 class="mb-3 font-bold">Company Info</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Follow us</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Quick Links</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="mb-3 font-bold">Get In Touch</h4>
+                <ul class="space-y-2 text-gray-600 font-semibold">
+                    <li>Skillsinnov8@gmail.com</li>
+                    <li><a href="#">Download our App</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-screen-lg w-full mx-auto flex text-agility-primary font-bold text-[12px] mb-6">
+            Skills-Innov8 Company. All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Toggle navbar on mobile -->
+    <script src="scripts/navbar.js"></script>
 </body>
 
 </html>
