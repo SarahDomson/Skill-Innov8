@@ -8,27 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/css/tabler.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
     <script src="scripts/tailwind.js"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              backgroundImage: {
-                'contact-gradient': 'conic-gradient(from -45.28deg at 61.07% 61.25%, #BBD2FF 0deg, #FFFFFF 54.37deg, #F0F5FF 121.29deg, #BBD2FF 360deg)',
-              },
-              colors: {
-                'agility-primary': '#193894',
-                'agility-secondary': '#000000',
-              }
-            },
-          },
-        }
-      </script>
 </head>
 
 <body class="bg-white w-full">
@@ -56,8 +39,8 @@
             <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
              Sign Up
             </a>
-            <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
-             Log In
+            <a href="./authentication page/log in.html" class="bg-[#EFEDED] text-lg text-black font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
+              Log In
             </a>
         </div>
 
@@ -78,14 +61,21 @@
         <a href="about.html" class="block text-agility-primary hover:text-blue-600">About</a>
         <a href="service.html" class="block text-agility-primary hover:text-blue-600">Service</a>
         <a href="contact.html" class="block text-agility-primary hover:text-blue-600">Contact</a>
-        <a href="./authentication page/splash.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Sign Up</a>
-        <a href="./authentication page/log in.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Log In</a>
+        <div class="flex">
+          <a href="./authentication page/splash.html"
+              class="bg-agility-primary text-white text-lg px-4 py-2 rounded-[5px] w-[120px] text-center mr-4">Sign
+              Up</a>
+          <a href="./authentication page/log in.html"
+              class="bg-[#EFEDED] text-lg text-black font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
+              Log In
+          </a>
+        </div>
     </div>
 </nav>
 
     <section class="py-16 bg-contact-gradient">
         <!-- Contact header -->
-        <div class="container mx-auto px-4 text-center mb-6">
+        <div class="container mx-auto px-4 text-center mb-6 font-poppins">
             <div class="inline-block mb-6">
                 <a href="#" class="inline-block no-underline hover:no-underline">
                   <h2 class="bg-[#193894B2] text-white font-semibold py-3 px-10 rounded-full text-xl transition-colors">Contact</h2>
