@@ -12,8 +12,7 @@
 <body class="bg-white-50">
     <div class="container mx-auto flex flex-col md:flex-row justify-center items-stretch h-screen">
         <div class="image_side hidden md:block md:w-1/2">
-            <img src=".
-            ./assets/images/employer_signup.png" alt="Employer" class="w-full h-full object-cover">
+            <img src="../assets/images/employer_signup.png" alt="Employer" class="w-full h-full object-cover">
         </div>
 
         <div class="text_side p-6 md:p-12 md:w-1/2 flex flex-col justify-center">
@@ -60,12 +59,86 @@
                     Log In
                 </button>
 
-                <p class="text-center text-gray-600 text-sm mt-4">
-                    Already have an account? <a href="login.html" class="text-blue-900 underline">Log In</a>
-                </p>
+                <div class="ml-3 text-sm">
+                    <label for="terms" class="font-medium text-gray-700">I agree to the 
+                        <a href="#" class="text-brand-blue hover:underline">Terms</a> and 
+                        <a href="#" class="text-brand-blue hover:underline">Conditions</a>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        document.getElementById('student-registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const email = document.getElementById('email').value;
+            const institutionalId = document.getElementById('institutional_id').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const termsAccepted = document.getElementById('terms').checked;
+            
+            // Basic validation
+            if (!email || !institutionalId || !password || !confirmPassword) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            if (!termsAccepted) {
+                alert('Please accept the Terms and Conditions');
+                return;
+            }
+            
+            // If validation passes, you would typically send this data to your server
+            console.log('Form submitted successfully', {
+                email,
+                institutionalId,
+                password,
+                termsAccepted
+            });
+            
+            // For demo purposes, show success message
+            alert('Account created successfully!');
+            
+            // Redirect to dashboard or login page
+        });
+        
+        // Social sign-in handlers
+        document.querySelectorAll('.social-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const provider = this.querySelector('img').alt.includes('Google') ? 'Google' : 'Apple';
+                console.log(`Signing up with ${provider}`);
+                
+                // In a real application, you would initiate OAuth flow here
+                alert(`${provider} sign-up initiated. This would redirect to ${provider}'s authentication page.`);
+            });
+        });
+        
+        // Password validation
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            // Add password strength indicator logic here if needed
+        });
+        
+        // Confirm password validation
+        document.getElementById('confirm-password').addEventListener('input', function() {
+            const confirmPassword = this.value;
+            const password = document.getElementById('password').value;
+            
+            if (confirmPassword && password && confirmPassword !== password) {
+                this.setCustomValidity('Passwords do not match');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>
 </body>
 
 </html
