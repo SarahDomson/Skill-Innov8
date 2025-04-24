@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white-50">
+    <div class="container mx-auto flex flex-col md:flex-row justify-center items-stretch h-screen">
+        <div class="image_side hidden md:block md:w-1/2">
+            <img src=".
+            ./assets/images/employer_signup.png" alt="Employer" class="w-full h-full object-cover">
+        </div>
+
+        <div class="text_side p-6 md:p-12 md:w-1/2 flex flex-col justify-center">
+            <div class="mb-4">
+                <a href="#" class="flex items-center text-gray-600 hover:text-gray-800">
+                    <i class="fa fa-angle-left mr-2"></i>
+                    <p class="text-sm">Back</p>
+                </a>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Create an Institution Account</h2>
+            <p class="text-gray-600 mb-4">Let's get you set up for a seamless SIWES experience.</p>
+            <div class="form space-y-4 ">
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2 mt-10">Official Email address</label>
+                    <input type="email" id="email" placeholder="Enter Email Address"
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="institutional_id" class="block text-gray-700 text-sm font-bold mb-2">Institution Code/ ID</label>
+                    <input type="text" id="institutional_id" placeholder="Enter an Institution Code/ ID"
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <input type="password" id="password" placeholder="Create a secure password"
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="confirm_password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+                    <input type="password" id="confirm_password" placeholder="Create a secure password"
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="terms" class="mr-2 leading-tight">
+                    <label for="terms" class="text-sm text-gray-700">
+                        I agree to the <a class="text-blue-900 font-bold">Terms</a> and <a class="text-blue-900 font-bold">Conditions</a>
+                    </label>
+                </div>
+
+                <button
+                    class="bg-blue-900 text-white font-bold w-full py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+                    Log In
+                </button>
+
+                <p class="text-center text-gray-600 text-sm mt-4">
+                    Already have an account? <a href="login.html" class="text-blue-900 underline">Log In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html
