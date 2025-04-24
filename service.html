@@ -13,6 +13,21 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/css/tabler.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
   <script src="scripts/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'contact-gradient': 'conic-gradient(from -45.28deg at 61.07% 61.25%, #BBD2FF 0deg, #FFFFFF 54.37deg, #F0F5FF 121.29deg, #BBD2FF 360deg)',
+          },
+          colors: {
+            'agility-primary': '#193894',
+            'agility-secondary': '#000000',
+          }
+        },
+      },
+    }
+  </script>
 </head>
 <body class="bg-white w-full">
    <!-- Navbar -->
@@ -28,18 +43,18 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-4 mx-auto w-[366px] text-lg">
-            <a href="index.html" class="text-agility-primary hover:text-blue-600">Home
-            <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
-            <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
-            <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+            <a href="index.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Home</a>
+            <a href="about.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">About</a>
+            <a href="service.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Service</a>
+            <a href="contact.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Contact</a>
         </div>
 
         <!-- Desktop Buttons -->
        <div class="hidden md:flex space-x-2">
-            <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+            <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
              Sign Up
             </a>
-            <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+            <a href="./authentication page/log in.html" class="bg-[#EFEDED] text-lg text-black font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
              Log In
             </a>
         </div>
@@ -67,7 +82,7 @@
 </nav>
 
     <main>
-        <section class="font-Poppins bg-gradient-to-r from-[#BBD2FF] via-[#F0F5FF] to-[#FFFFFF] w-full h-[500px] flex flex-col items-center justify-center gap-4">
+        <section class="font-Poppins py-20 bg-contact-gradient w-full h-[500px] flex flex-col items-center justify-center gap-4">
             <div class="max-w-5xl mx-auto text-center">
               <div class="inline-block mb-12">
                 <a href="#" class="inline-block no-underline hover:no-underline">
@@ -203,7 +218,7 @@
           <div>
               <h4 class="mb-3 font-bold">Company Info</h4>
               <ul class="space-y-2 text-gray-600 font-semibold">
-                  <li><a href="#">About Us</a></li>
+                  <li><a href="about.html">About Us</a></li>
                   <li><a href="#">Carrier</a></li>
               </ul>
           </div>
@@ -221,10 +236,10 @@
           <div>
               <h4 class="mb-3 font-bold">Quick Links</h4>
               <ul class="space-y-2 text-gray-600 font-semibold">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Service</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="service.html">Service</a></li>
+                  <li><a href="contact.html">Contact</a></li>
               </ul>
           </div>
 
@@ -233,7 +248,7 @@
               <ul class="space-y-2 text-gray-600 font-semibold">
                   <li>Skillsinnov8@gmail.com</li>
                   <li><a href="#">Download our App</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="contact.html">Contact</a></li>
               </ul>
           </div>
       </div>
