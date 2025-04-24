@@ -7,13 +7,25 @@
     <title>Skills-Innov8</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              backgroundImage: {
+                'contact-gradient': 'conic-gradient(from -45.28deg at 61.07% 61.25%, #BBD2FF 0deg, #FFFFFF 54.37deg, #F0F5FF 121.29deg, #BBD2FF 360deg)',
+              },
+              colors: {
+                'agility-primary': '#193894',
+                'agility-secondary': '#000000',
+              }
+            },
+          },
+        }
+      </script>
 </head>
 
 <body class="bg-white">
@@ -30,18 +42,18 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-4 mx-auto w-[366px] text-lg">
-                <a href="/" class="text-agility-primary hover:text-blue-600">Home</a>
-                <a href="about.html" class="text-agility-primary hover:text-blue-600">About</a>
-                <a href="service.html" class="text-agility-primary hover:text-blue-600">Service</a>
-                <a href="contact.html" class="text-agility-primary hover:text-blue-600">Contact</a>
+                <a href="index.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Home</a>
+                <a href="about.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">About</a>
+                <a href="service.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Service</a>
+                <a href="contact.html" class="text-agility-primary text-lg font-medium hover:text-blue-600">Contact</a>
             </div>
 
             <!-- Desktop Buttons -->
            <div class="hidden md:flex space-x-2">
-                <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                <a href="./authentication page/splash.html" class="bg-agility-primary text-lg text-white font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
                  Sign Up
                 </a>
-                <a href="./authentication page/log in.html" class="bg-agility-primary text-lg text-white px-4 py-2 rounded-[5px] w-[120px] text-center">
+                <a href="./authentication page/log in.html" class="bg-[#EFEDED] text-lg text-black font-medium px-4 py-2 rounded-[5px] w-[120px] text-center">
                  Log In
                 </a>
             </div>
@@ -59,7 +71,7 @@
 
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="md:hidden hidden flex-col items-start px-2 mt-2 space-y-2">
-            <a href="/" class="block text-agility-primary hover:text-blue-600">Home</a>
+            <a href="index.html" class="block text-agility-primary hover:text-blue-600">Home</a>
             <a href="about.html" class="block text-agility-primary hover:text-blue-600">About</a>
             <a href="service.html" class="block text-agility-primary hover:text-blue-600">Service</a>
             <a href="contact.html" class="block text-agility-primary hover:text-blue-600">Contact</a>
@@ -67,98 +79,226 @@
             <a href="./authentication page/log in.html" class="bg-agility-primary text-white px-4 py-2 rounded-[5px] w-full text-center">Log In</a>
         </div>
     </nav>
-    <!-- About Us -->
-    <section class="sec-1">
-        <div class="Hero">
-            <button>About us</button>
-            <p>
-                Skillis-Innov8 is a mobile application aimed at transforming the Students Industrial Work Experience Scheme (SIWES) by digitally connecting students with industrial training opportunities. It streamlines the placement process and fosters a more efficient and accessible ecosystem for industrial training.
-            </p>
-        </div>
-    </section>
-    <section class="sec-2">
-        <div class="wrap-1">
-            <div class="Head-1">
-                <h2>Designing Better Experience</h2>
-                <p>
-                    Problem trying to provide hand-on experience and practical skills in their field and providing a better placement to work
+    
+    <main>
+        <section class="py-20 bg-contact-gradient">
+            <div class="max-w-5xl mx-auto h-80 items-center text-center">
+                <div class="inline-block mb-12">
+                  <a href="#" class="inline-block no-underline hover:no-underline">
+                    <h2 class="bg-[#193894B2] text-white font-semibold py-3 px-10 rounded-full text-xl transition-colors">About us</h2>
+                  </a>
+                </div>
+                
+                <p class="text-[#100F0F] text-xl md:text-2xl font-bold leading-8 tracking-wider max-w-4xl mx-auto">
+                    Skillis-Innov8 is a mobile application aimed at transforming the Students Industrial 
+                    Work Experience Scheme (SIWES) by digitally connecting students with industrial training opportunities. 
+                    It streamlines the placement process and fosters a more efficient and accessible ecosystem for industrial training.
                 </p>
+              </div>
+        </section>
+
+    <section class="max-w-7xl mx-auto py-16 px-4">
+          <!-- Header Section -->
+            <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-[#252B42] leading-[0.2p] tracking-wide mb-5">Designing Better Experience</h2>
+              <p class="text-sm text-[#737373]  mx-auto">
+              Problem trying to provide hand-on experience and practical skills in their field and <br> providing a better placement to work
+              </p>
             </div>
-            <div class="sec2-cont">
-                <div class="vid-div">
-                    <video src="./VID-20250418-WA0010.mp4" controls>currently not available</video>
-                </div>
-                <div class="cont">
-                    <div>
-                        <h3 class="cent">Centralized SIWES platform</h3>
-                        <p class="dev">Developing a comprehensive online platform for SIWES placement, providing students with easy access to vertified opportunities</p>
-                    </div>
-                    <div>
-                        <h4><i class="fa-regular fa-square-sliders"></i> <b>A searchable database of platform opportunities</b></h4>
-                        <h4><i class="fa-regular fa-message-quote"></i> <b>A user friendly applicationprocess</b></h4>
-                    </div>
-                </div>
-            </div>
+    
+    <!-- Content Section -->
+    <div class="flex flex-col md:flex-row items-center gap-16">
+      <div class="md:w-3/5">
+        <div class="relative rounded-lg shadow-md overflow-hidden aspect-video">
+          <video 
+            class="w-full h-full object-cover" 
+            controls
+            poster="./assets/images/lady-with-laptop.png">
+            <source src="./assets/images/VID-20250418-WA0011.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-    </section>
-    <section class="sec-2">
-        <div class="wrap-1">
-            <div class="Head-1">
-                <h2>Multi-User Access System</h2>
-                <p>
-                    designed with different access levels for students, companies, and institutions. Each user type has a tailored dashboard and features to suit their specific needs and roles in the SIWES process.
-                </p>
-            </div>
-            <div class="sec2-cont">
-                <div class="cont">
-                    <div>
-                        <h3 class="cent">Role-based dashboard system</h3>
-                        <p class="dev">provides different users with customized interfaces and features based on their specific roles in the platform.</p>
-                    </div>
-                    <div>
-                        <h4><b>Each user on the platform enjoys a customized experience</b></h4>
-                        <h4><b>The platform ensures transparency by allowing all activities</b></h4>
-                    </div>
-                </div>
-                <div class="vid-div">
-                    <video src="./VID-20250418-WA0011.mp4" controls>currently not available</video>
-                </div>
-            </div>
+      </div>
+      
+      <div class="md:w-2/5 space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold text-[#252B42] mb-3">Centralized SIWES platform</h3>
+          <p class="text-[#737373] text-sm">
+            Developing a comprehensive online platform for SIWES <br> placement, providing students with easy <br> access to verified opportunities
+          </p>
         </div>
-    </section>
-    <section class="sec-3">
-        <div class="sec-3-1">
-            <div>
-                <h3>1.26M</h3>
-                <p>Participate every year</p>
+        
+        <div class="flex items-center justify-start gap-2 w-full">
+            <div class="flex-shrink-0">
+              <div class="p-3 rounded-full">
+                <img src="./assets/icons/icn settings .icn-md (1).svg" alt="Settings icon" class="w-6 h-6">
+              </div>
             </div>
-            <div>
-                <h3>100%</h3>
-                <p>Service guaranteed</p>
+            <div class="flex-1">
+              <h4 class="font-bold text-[#252B42] text-base">A searchable database of
+                platform opportunities</h4>
             </div>
-            <div>
-                <h3>36</h3>
-                <p>State in Nigeria</p>
+          </div>
+        
+        <!-- Feature 2 -->
+        <div class="flex items-center justify-start gap-2 w-full">
+            <div class="flex-shrink-0">
+              <div class="p-3 rounded-full">
+                <img src="./assets/icons/icn settings .icn-md.svg" alt="Settings icon" class="w-6 h-6">
+              </div>
             </div>
+            <div class="flex-1">
+              <h4 class="font-bold text-[#252B42] text-base">A user friendly application process</h4>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto py-16 px-4">
+    <!-- Content Section -->
+     <div class="flex flex-col md:flex-row items-center gap-16">
+    
+    <div class="md:w-2/5 space-y-8 order-2 md:order-1">
+      <div>
+        <h3 class="text-2xl md:text-3xl font-bold text-[#252B42] mb-4">Role-based dashboard <br> system</h3>
+        <p class="text-[#737373] text-base leading-relaxed">
+            provides different users with customized interfaces and features based on their specific roles in the platform.
+        </p>
+      </div>
+      
+      <div class="flex items-center gap-4 w-full">
+        <div class="flex-shrink-0">
+            <div class="p-3 rounded-full">
+              <img src="./assets/icons/icn settings .icn-md.svg" alt="Settings icon" class="w-6 h-6">
+            </div>
+          </div>
+        <div class="flex-1">
+          <h4 class="font-bold text-[#252B42] text-lg">Each user on the platform enjoys <br> a customized experience </h4>
         </div>
-    </section>
-    <section class="sec-4">
-        <div class="sec-4-1">
-            <div class="skil-con">
-                <div class="skil">
-                    <h1>Skill-Innov8 is Available for all Device</h1>
-                    <p>Connect with Institution and Companies in one simple platform</p>
-                </div>
-                <div class="btn-cont">
-                    <div><a href="#" class="store-btn"><i class="fab fa-google-play"></i>Download on the <br>Goodgle Play</a></div>
-                    <div><a href="#" class="store-btn"><i class="fa-brands fa-apple"></i>Download on the <br>Apple Store</a></div>
-                </div>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="flex items-center gap-4 w-full">
+        <div class="flex-shrink-0">
+            <div class="p-3 rounded-full">
+              <img src="./assets/icons/icn settings .icn-md.svg" alt="Settings icon" class="w-6 h-6">
             </div>
-            <div class="skil-1">
-                <img src="./assets/images/iPhone 12 Mini.png" alt="Phone Screen" />
-            </div>
+          </div>
+        <div class="flex-1">
+          <h4 class="font-bold text-[#252B42] text-lg">The platform ensures <br> transparency by allowing all <br> activities</h4>
         </div>
-    </section>
+      </div>
+    </div>
+  
+    <!-- Video Content -->
+    <div class="md:w-3/5 order-1 md:order-2">
+      <div class="relative rounded-2xl shadow-lg overflow-hidden aspect-video">
+        <video 
+          class="w-full h-full object-cover" 
+          controls
+          poster="./assets/images/group-with-laptop.png">
+          <source src="./assets/images/group-with-laptop.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl font-bold text-black font-roboto mb-8">Our Team</h2>
+      <p class="text-3xl text-light text-gray-800 leading-[59px]">
+        We're a diverse team of innovators - designers, developers, product managers, 
+        data analyst, scrum masters, marketers and AI/Machine developers - passionate 
+        about empowering students and industries through Skillis-Innov8. Our mission: to 
+        provide accessible, world-class industrial training opportunities for anyone, 
+        anywhere.
+      </p>
+    </div>
+  </section>
+
+  <section class="flex items-center justify-center m-10">
+    <div class="bg-[#193894] text-white w-full max-w-6xl rounded-2xl shadow-xl p-8 md:p-12">
+      <div class="flex flex-col md:flex-row justify-between items-center text-center gap-8">
+        <!-- Stat 1 -->
+        <div class="flex-1">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">1.26M</h2>
+          <p class="text-lg text-blue-100">Participate every year</p>
+        </div>
+        
+        <!-- Stat 2 -->
+        <div class="flex-1">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">100%</h2>
+          <p class="text-lg text-blue-100">Service guaranteed</p>
+        </div>
+        
+        <!-- Stat 3 -->
+        <div class="flex-1">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">36</h2>
+          <p class="text-lg text-blue-100">State in Nigeria</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="bg-[#193894] max-w-6xl mx-auto py-14 px-4">
+    <div class="max-w-5xl mx-auto px-2"> 
+      <div class="flex flex-col md:flex-row items-center justify-between py-16 gap-8">
+        <!-- Text Content -->
+        <div class="md:w-1/2 max-w-xl"> <!-- Added max-w-xl to constrain text width -->
+          <h1 class="text-3xl md:text-6xl text-white font-bold md:leading-[100px]">
+            Skill-Innov8 is <br> Available for all <br> Devices
+          </h1>
+
+          <p class="text-lg text-white md:xl mb-5">Connect with Institution and Companies in one simple platform</p>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-4">     
+            <a href="#" class="inline-block no-underline hover:no-underline">
+              <div class="bg-white text-black py-2 px-4 rounded-lg flex items-center">
+                <div class="mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48">
+                    <path fill="#4db6ac" d="M7.705,4.043C7.292,4.15,7,4.507,7,5.121c0,1.802,0,18.795,0,18.795S7,42.28,7,43.091c0,0.446,0.197,0.745,0.5,0.856l20.181-20.064L7.705,4.043z"></path><path fill="#dce775" d="M33.237,18.36l-8.307-4.796c0,0-15.245-8.803-16.141-9.32C8.401,4.02,8.019,3.961,7.705,4.043l19.977,19.84L33.237,18.36z"></path><path fill="#d32f2f" d="M8.417,43.802c0.532-0.308,15.284-8.825,24.865-14.357l-5.601-5.562L7.5,43.947C7.748,44.038,8.066,44.004,8.417,43.802z"></path><path fill="#fbc02d" d="M41.398,23.071c-0.796-0.429-8.1-4.676-8.1-4.676l-0.061-0.035l-5.556,5.523l5.601,5.562c4.432-2.559,7.761-4.48,8.059-4.653C42.285,24.248,42.194,23.5,41.398,23.071z"></path>
+                    </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs">Download on the</div>
+                  <div class="font-semibold">Google Play</div>
+                </div>
+              </div>
+            </a>
+            
+            <a href="#" class="inline-block no-underline hover:no-underline">
+              <div class="bg-white text-black py-2 px-4 rounded-lg flex items-center">
+                <div class="mr-2">
+                  <svg width="24" height="24" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" fill="black"/>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs">Download on the</div>
+                  <div class="font-semibold">Apple Store</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Content -->
+        <div class="md:w-1/2 flex justify-end">
+          <img 
+            src="./assets/images/sheldon.png" 
+            alt="Devices showing Skill-Innov8 app"
+            class="max-w-full h-auto object-contain">
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</main>
+    
+
 
     <!-- Footer Section -->
     <footer class="bg-white border-t border-blue-100 py-12 px-2 sm:px-4 font-montserrat">
@@ -198,10 +338,10 @@
             <div>
                 <h4 class="mb-3 font-bold">Quick Links</h4>
                 <ul class="space-y-2 text-gray-600 font-semibold">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="service.html">Service</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -210,7 +350,7 @@
                 <ul class="space-y-2 text-gray-600 font-semibold">
                     <li>Skillsinnov8@gmail.com</li>
                     <li><a href="#">Download our App</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
